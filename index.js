@@ -1,11 +1,11 @@
 import express from "express";
 import {MongoClient,ObjectId} from "mongodb";
 import cors from "cors"
-const DBUSER=peduruharshita2004
-const PASS=en6H5ffgFoLt7C4X
+const usr = encodeURIComponent('peduruharshita2004')
+const pwd =encodeURIComponent('en6H5ffgFoLt7C4X')
 // const uri="mongodb://127.0.0.1:27017"
 
-const uri="mongodb+srv://${DBUSER}:${PASS}@cluster0.1c3ya.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const uri=`mongodb+srv://${usr}:${pwd}@cluster0.1c3ya.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 
 const client=new MongoClient(uri)
 const db=client.db("ecomm")
